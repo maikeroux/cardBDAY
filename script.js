@@ -1,4 +1,4 @@
-const cardBackImage = "photos/card-back.jpg";
+const cardBackImage = "photos/card-back.JPG";
 
 const cardImages = [
   "photos/card1.jpg",
