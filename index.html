@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1 class="title">🎉 Happy Birthday Alexa! 🎉</h1>
+    <h1 class="title">🎉 ALEXA CARDS 🎉</h1>
 
-    <div class="cards-container">
-        <div id="messageBox" class="message-box hidden">
-            <p id="messageText"></p>
-        </div>
+    <div class="cards-container"></div>
+
+    <!-- message box for greetings -->
+    <div id="messageBox" class="message-box hidden">
+        <p id="messageText"></p>
     </div>
+
+    <!-- final sparkling message -->
+    <div id="finalMessage" class="message-box hidden">
+        <p>🎉 Happy Birthday Alexa! 🎉</p>
+    </div>
+
+    <!-- background music -->
+    <audio id="birthdayMusic" src="music/happy.mp3" autoplay loop></audio>
 
     <script src="script.js"></script>
 </body>
