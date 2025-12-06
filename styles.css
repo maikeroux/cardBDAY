@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffeef8;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 2rem;
+  color: #e60073;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 220px;
+  height: 320px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(var(--angle));
+  transition: transform 0.6s ease, opacity 0.6s ease, background-image 0.3s ease;
+}
+
+.card.flipped {
+  z-index: 999;
+}
+
+.message-box {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.message-box.show {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkleAnim 0.7s linear forwards;
+}
+
+@keyframes sparkleAnim {
+  0% {
+    transform: scale(0.5) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translate(var(--x, 20px), var(--y, -20px));
+    opacity: 0;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 180px;
+    height: 260px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+}
