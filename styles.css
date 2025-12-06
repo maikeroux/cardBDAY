@@ -107,8 +107,19 @@ body {
 
 /* Mobile responsive */
 @media (max-width: 600px) {
-  .card { width: 160px; height: 240px; }
-  .title { font-size: 1.5rem; margin-bottom: 15px; }
-  .message-box { font-size: 0.95rem; padding: 8px 12px; }
-  #finalMessage p { font-size: 2rem; }
+  .card {
+    width: 260px;   /* much larger width */
+    height: 360px;  /* much larger height */
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .message-box {
+    font-size: 1.1rem;
+    padding: 12px 18px;
+  }
+  #finalMessage p {
+    font-size: 3rem;  /* bigger final message text */
+  }
 }
